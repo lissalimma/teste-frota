@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FrotaComponent } from './frota/frota/frota.component';
+import { FrotaComponent } from './frota/frota.component';
 
 const routes: Routes = [{
   path: '',
@@ -11,4 +11,4 @@ const routes: Routes = [{
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class FrotaRoutingModule { }
