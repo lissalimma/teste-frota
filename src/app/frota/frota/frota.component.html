@@ -3,13 +3,17 @@
         Vehicle Management
     </h1>
     <p class="subtitulo">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
     </p>
-    <table>
-        <tr> 
+    <table class="filtro-container-table">
+        <tr>
             <td class="filtro-container">
-                <input class="filtro" placeholder="plate"> <img src = "/assets/images/search-solid.svg" class="lupa">
-                
+                <input class="filtro" placeholder="plate"> <img src="/assets/images/search-solid.svg" class="lupa">
             </td>
             <td class="botao-container">
                 <button class="botao">
@@ -17,9 +21,7 @@
                 </button>
             </td>
         </tr>
-
     </table>
-
     <table class="tabela">
         <tr class="cabecalho">
             <th>
@@ -49,15 +51,16 @@
                 {{element.manufacturer}}
             </td>
             <td>
+                <div class="status">
+                <div [ngClass]="element.status === 'Active' ? 'bolinha-verde' : 'bolinha-vermelha'"></div> &nbsp;  
                 {{element.status}}
+                </div>
             </td>
             <td class="icone">
                 <img src="../../../assets/images/edit-regular.svg" class="editar">
+                &nbsp;
                 <img src="../../../assets/images/trash-alt-regular.svg" class="excluir">
-
             </td>
         </tr>
-        
     </table>
-
 </section>
