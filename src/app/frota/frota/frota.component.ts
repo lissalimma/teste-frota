@@ -7,6 +7,51 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrotaComponent implements OnInit {
 
+   list = [
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Inactive"
+    }, 
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    }
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

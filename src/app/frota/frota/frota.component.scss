@@ -1,0 +1,31 @@
+$magenta: #BC2F6C;
+$preto:#282828; 
+$verde-claro:#BDD654; 
+$verde-escuro:#0E7F61;
+$cinza-escuro: #555550;
+$cinza-claro: #DDDDDD;
+
+$fonte-14:14px;
+
+section {
+    font-family: 'Open Sans';
+}
+
+.titulo {
+    color:$cinza-escuro;
+}
+
+.subtitulo{
+    font-size: $fonte-14;
+    color: $cinza-escuro;
+}
+
+.filtro{
+    border: 0px;
+    border-bottom: solid $cinza-claro 1px;
+
+}
+
+.lupa{
+    height: 16px;
+}
