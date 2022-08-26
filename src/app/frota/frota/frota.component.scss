@@ -1,15 +1,15 @@
-$magenta: #BC2F6C;
+$magenta: #bc2f6c;
 $preto: #282828;
-$verde-claro: #BDD654;
-$verde-escuro: #0E7F61;
+$verde-claro: #bdd654;
+$verde-escuro: #0e7f61;
 $cinza-escuro: #555550;
-$cinza-claro: #DDDDDD;
-$azul: #43A4E6;
+$cinza-claro: #dddddd;
+$azul: #43a4e6;
 
 $fonte-14: 14px;
 
 section {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     padding: 50px;
@@ -61,6 +61,7 @@ table {
 
 .tabela td {
     text-align: center;
+    padding: 10px;
 }
 
 .tabela th {
@@ -68,14 +69,20 @@ table {
     color: white;
     font-weight: 600px;
     padding: 10px;
+}
 
+.tabela tr:nth-child(even) {
+    background: $cinza-claro;
+}
+
+.filtro-container-table {
+    margin-top: 60px;
 }
 
 .tabela {
-    padding-top: 40px;
+    margin-top: 40px;
     color: $cinza-escuro;
-    padding-top: 40px;
-    color: $cinza-escuro;
-    border-radius: 30px;
+    border-collapse: collapse;
+    border-radius: .5em;
     overflow: hidden;
 }
