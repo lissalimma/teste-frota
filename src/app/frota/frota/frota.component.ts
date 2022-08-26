@@ -49,6 +49,66 @@ export class FrotaComponent implements OnInit {
       model: "c180",
       manufacturer: "Mercedes-Benz",
       status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
+    },
+    {
+      plate: "ASD1234",
+      model: "c180",
+      manufacturer: "Mercedes-Benz",
+      status: "Active"
     }
   ]
 
