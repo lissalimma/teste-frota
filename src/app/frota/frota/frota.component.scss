@@ -41,10 +41,12 @@ table {
 
 .editar {
     height: 16px;
+    cursor: pointer;
 }
 
 .excluir {
     height: 16px;
+    cursor: pointer;
 }
 
 .botao {
@@ -53,6 +55,7 @@ table {
     padding: 10px 16px;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
 
 .botao-container {
@@ -104,6 +107,14 @@ table {
 .status{
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: flex-start;
+
+}
+
+@media only screen and (max-width: 420px) {
+    .tabela{
+        display: block;
+        max-width: 100%;
+        overflow: scroll;
+    }
 }

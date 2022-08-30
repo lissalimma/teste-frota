@@ -1,0 +1,38 @@
+$cinza-escuro: #555550;
+$fonte-14: 14px;
+$magenta: #bc2f6c;
+
+section {
+    font-family: "Open Sans", sans-serif;
+}
+
+.titulo {
+    color: $cinza-escuro;
+}
+
+.subtitulo {
+    font-size: $fonte-14;
+    color: $cinza-escuro;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    text-align: center;
+    padding: 10px;
+}
+
+button{
+    border: none;
+    background-color: rgba(1,1,1,0);
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.botao-conf{
+    color: $magenta;
+}
+
+

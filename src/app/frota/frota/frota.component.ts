@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { DeleteComponent } from '../delete/delete.component';
+
 
 @Component({
   selector: 'app-frota',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrotaComponent implements OnInit {
 
-   list = [
+  list = [
     {
       plate: "ASD1234",
       model: "c180",
@@ -19,7 +22,7 @@ export class FrotaComponent implements OnInit {
       model: "c180",
       manufacturer: "Mercedes-Benz",
       status: "Inactive"
-    }, 
+    },
     {
       plate: "ASD1234",
       model: "c180",
@@ -110,11 +113,26 @@ export class FrotaComponent implements OnInit {
       manufacturer: "Mercedes-Benz",
       status: "Active"
     }
-  ]
+  ];
+  
+  filtro: string = "";
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {
+  }
 
   ngOnInit(): void {
+  }
+
+  openModal(){
+    this.dialog.open(DeleteComponent, {
+      width: '350px'
+      
+    });
+  }
+
+  filtrar(){    
+   this.list = this.list.filter(data => data.plate === this.filtro)
+  
   }
 
 }

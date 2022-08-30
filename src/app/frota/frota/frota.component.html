@@ -1,4 +1,5 @@
 <section>
+
     <h1 class="titulo">
         Vehicle Management
     </h1>
@@ -13,16 +14,16 @@
     <table class="filtro-container-table">
         <tr>
             <td class="filtro-container">
-                <input class="filtro" placeholder="plate"> <img src="/assets/images/search-solid.svg" class="lupa">
+                <input [(ngModel)]="filtro" (ngModelChange)="filtrar()" class="filtro" placeholder="plate" > <img src="/assets/images/search-solid.svg" class="lupa">
             </td>
             <td class="botao-container">
-                <button class="botao">
+                <button  class="botao">
                     Add Vehicle +
                 </button>
             </td>
         </tr>
     </table>
-    <table class="tabela">
+    <table *ngIf="list.length > 0" class="tabela">
         <tr class="cabecalho">
             <th>
                 Plate
@@ -50,7 +51,7 @@
             <td>
                 {{element.manufacturer}}
             </td>
-            <td>
+            <td width="100" >
                 <div class="status">
                 <div [ngClass]="element.status === 'Active' ? 'bolinha-verde' : 'bolinha-vermelha'"></div> &nbsp;  
                 {{element.status}}
@@ -59,7 +60,7 @@
             <td class="icone">
                 <img src="../../../assets/images/edit-regular.svg" class="editar">
                 &nbsp;
-                <img src="../../../assets/images/trash-alt-regular.svg" class="excluir">
+                <img src="../../../assets/images/trash-alt-regular.svg" class="excluir" (click)="openModal()">
             </td>
         </tr>
     </table>
