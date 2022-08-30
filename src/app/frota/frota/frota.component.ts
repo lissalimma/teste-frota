@@ -12,19 +12,19 @@ export class FrotaComponent implements OnInit {
 
   list = [
     {
-      plate: "ASD1234",
+      plate: "ASD1231",
       model: "c180",
       manufacturer: "Mercedes-Benz",
       status: "Active"
     },
     {
-      plate: "ASD1234",
+      plate: "ASD1232",
       model: "c180",
       manufacturer: "Mercedes-Benz",
       status: "Inactive"
     },
     {
-      plate: "ASD1234",
+      plate: "ASD1233",
       model: "c180",
       manufacturer: "Mercedes-Benz",
       status: "Active"
@@ -36,85 +36,43 @@ export class FrotaComponent implements OnInit {
       status: "Active"
     },
     {
-      plate: "ASD1234",
+      plate: "ASD1235",
       model: "c180",
       manufacturer: "Mercedes-Benz",
       status: "Active"
     },
     {
-      plate: "ASD1234",
+      plate: "ASD1236",
       model: "c180",
       manufacturer: "Mercedes-Benz",
       status: "Active"
     },
     {
-      plate: "ASD1234",
+      plate: "ASD1237",
       model: "c180",
       manufacturer: "Mercedes-Benz",
       status: "Active"
     },
     {
-      plate: "ASD1234",
+      plate: "ASD1238",
       model: "c180",
       manufacturer: "Mercedes-Benz",
       status: "Active"
     },
     {
-      plate: "ASD1234",
+      plate: "ASD1239",
       model: "c180",
       manufacturer: "Mercedes-Benz",
       status: "Active"
     },
     {
-      plate: "ASD1234",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1234",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1234",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1234",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1234",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1234",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1234",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1234",
+      plate: "ASD1210",
       model: "c180",
       manufacturer: "Mercedes-Benz",
       status: "Active"
     }
   ];
-  
+  listFilter = this.list;
   filtro: string = "";
 
   constructor(public dialog: MatDialog) {
@@ -123,16 +81,19 @@ export class FrotaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openModal(){
+  openModal() {
     this.dialog.open(DeleteComponent, {
       width: '350px'
-      
+
     });
   }
 
-  filtrar(){    
-   this.list = this.list.filter(data => data.plate === this.filtro)
-  
+  filtrar() {
+    if (this.filtro.length === 7) {
+      this.list = this.list.filter(data => data.plate == this.filtro)
+    } else {
+      this.list = this.listFilter;
+    }
   }
 
 }

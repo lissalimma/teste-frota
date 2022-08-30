@@ -14,7 +14,7 @@
     <table class="filtro-container-table">
         <tr>
             <td class="filtro-container">
-                <input [(ngModel)]="filtro" (ngModelChange)="filtrar()" class="filtro" placeholder="plate" > <img src="/assets/images/search-solid.svg" class="lupa">
+                <input maxlength="7" [(ngModel)]="filtro" (ngModelChange)="filtrar()" class="filtro" placeholder="plate" > <img src="/assets/images/search-solid.svg" class="lupa">
             </td>
             <td class="botao-container">
                 <button  class="botao">
