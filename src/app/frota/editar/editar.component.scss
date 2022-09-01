@@ -92,10 +92,23 @@ form {
 }
 
 @media only screen and (max-width: 420px) {
+    td {
+        display: inline-block;
+    }
+
     .img-carro {
         width: 60px;
+        margin-top: 20px;
     }
+
     .salvar, .reset{
-        min-width: 110px;
+        width: 50px;
+        padding: 10px 10px;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    section {
+        width: 100%;
     }
 }

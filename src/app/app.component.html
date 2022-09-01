@@ -1,1 +1,26 @@
-<router-outlet></router-outlet>
+<section>
+    <table style="overflow-x:auto;">
+        <tr>
+            <td class="menu">
+                <img src="../assets/images/alelo-logo.png" class="logo">
+
+                <h1 class="titulo">Alelo Frota</h1>
+
+                <ul>
+                    <li>
+                        <img src="../assets/images/border-all-solid.svg" class="item"> Dashboard
+                    </li>
+                    <li [routerLink]="['']" class="selected-menu">
+                        <img src="../assets/images/car-side-solid.svg" class="item"> Vehicle
+                    </li>
+                    <li>
+                        <img src="../assets/images/chart-bar-solid.svg" class="item"> Reports
+                    </li>
+                </ul>
+            </td>
+            <td class="outlet-container">
+                <router-outlet></router-outlet>
+            </td>
+        </tr>
+    </table>
+</section>
