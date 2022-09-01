@@ -5,6 +5,8 @@ $verde-escuro: #0e7f61;
 $cinza-escuro: #555550;
 $cinza-claro: #dddddd;
 $azul: #43a4e6;
+$cinza-clarinho: #F7F7F7;
+
 $fonte-14: 14px;
 
 section {
@@ -13,6 +15,7 @@ section {
     box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
     transition: all 0.3s ease-out;
     padding: 50px;
+    background-color: $cinza-clarinho;
 }
 
 .titulo {
@@ -29,6 +32,8 @@ section {
     border-bottom: solid $cinza-claro 1px;
     width: 60%;
     outline: 0;
+    background-color: $cinza-clarinho;
+
 }
 
 .lupa {

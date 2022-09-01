@@ -6,6 +6,7 @@ import { CreatComponent } from './create/creat.component';
 import { DeleteComponent } from './delete/delete.component';
 import { MatDialog } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
+import { EditarComponent } from './editar/editar.component';
 
 
 
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     FrotaComponent,
     CreatComponent,
-    DeleteComponent
+    DeleteComponent,
+    EditarComponent
   ],
   imports: [
     CommonModule,

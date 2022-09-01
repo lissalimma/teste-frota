@@ -17,7 +17,7 @@
                 <input maxlength="7" [(ngModel)]="filtro" (ngModelChange)="filtrar()" class="filtro" placeholder="plate" > <img src="/assets/images/search-solid.svg" class="lupa">
             </td>
             <td class="botao-container">
-                <button  class="botao">
+                <button  class="botao" [routerLink]="['/editar']">
                     Add Vehicle +
                 </button>
             </td>
@@ -58,7 +58,7 @@
                 </div>
             </td>
             <td class="icone">
-                <img src="../../../assets/images/edit-regular.svg" class="editar">
+                <img src="../../../assets/images/edit-regular.svg" class="editar" [routerLink]="['/editar', element.plate]">
                 &nbsp;
                 <img src="../../../assets/images/trash-alt-regular.svg" class="excluir" (click)="openModal()">
             </td>
