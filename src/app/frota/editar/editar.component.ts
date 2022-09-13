@@ -22,9 +22,8 @@ export class EditarComponent implements OnInit {
   }
 
   save(): void {
-    this.api.save(this.formulario.value).subscribe({
-      this.route.navigate(['../']);
-
+    this.api.save(this.formulario.value).subscribe(() => {
+      this.route.navigate(['/']);
     })
   }
 
