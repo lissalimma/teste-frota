@@ -15,4 +15,8 @@ export class ApiService {
   deleteItens(plate) {
     return this.http.delete('http://localhost:8081/Vehicles/' + plate)
   }
+
+  save(form){
+    return this.http.post('http://localhost:8081/Vehicles', form )
+  }
 }
