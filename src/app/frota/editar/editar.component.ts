@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-editar',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarComponent implements OnInit {
 
-  constructor() { }
+  formulario: FormGroup;
+  constructor( private form: FormBuilder) { 
+    this.formulario = this.form.group({
+      plate: "",
+      model:"",
+      manufacturer: "",
+      color: "",
+      status:""
+    })
+  }
+
+  save (): void {
+    console.log(this.formulario.value);
+  }
 
   ngOnInit(): void {
+    
   }
 
 }

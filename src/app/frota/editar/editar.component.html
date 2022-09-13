@@ -1,61 +1,63 @@
 <section>
-    <table>
-        <tr>
-            <td class="formulario">
-                <h1 class="titulo">
-                    Update Vehicle
-                </h1>
+    <form [formGroup]="formulario">
+        <table>
+            <tr>
+                <td class="formulario">
+                    <h1 class="titulo">
+                        Update Vehicle
+                    </h1>
 
-                <form>
-                    <h2>
-                        Plate
+                    <form>
+                        <h2>
+                            Plate
 
-                    </h2>
-                    <input class="input">
+                        </h2>
+                        <input class="input" formControlName="plate">
 
-                    <h2>
-                        Model
-                    </h2>
-                    <input class="input">
+                        <h2>
+                            Model
+                        </h2>
+                        <input class="input" formControlName="model">
 
-                    <h2>
-                        Manufacturer
-                    </h2>
-                    <input class="input">
+                        <h2>
+                            Manufacturer
+                        </h2>
+                        <input class="input" formControlName="manufacturer">
 
-                    <h2>
-                        Color
-                    </h2>
-                    <input class="input">
+                        <h2>
+                            Color
+                        </h2>
+                        <input class="input" formControlName="color">
 
-                    <h2>
-                        Status
-                    </h2>
+                        <h2>
+                            Status
+                        </h2>
 
-                    <label>
-                        <input type="radio" name="status" value="Active" class="box">
-                        Active
-                    </label>
-                    <label>
-                        <input type="radio" name="status" value="Inactive" class="box">
-                        Inactive
-                    </label>
-                    <br>
-                    <tr>
-                        <button class="reset">
-                            Reset All
-                        </button>
-                        &nbsp;
-                        <button class="salvar">
-                            Save
-                        </button>
-                    </tr>
-                </form>
-            </td>
-            <td class="carro">
-                <img src="../../../assets/images/car.png" class="img-carro">
+                        <label>
+                            <input type="radio" name="status" value="Active" class="box" formControlName="status">
+                            Active
+                        </label>
+                        <label>
+                            <input type="radio" name="status" value="Inactive" class="box" formControlName="status">
+                            Inactive
+                        </label>
+                        <br>
+            <tr>
+                <button class="reset">
+                    Reset All
+                </button>
+                &nbsp;
+                <button class="salvar" (click)="save()">
+                    Save
+                </button>
+            </tr>
+    </form>
+    </td>
+    <td class="carro">
+        <img src="../../../assets/images/car.png" class="img-carro">
 
-            </td>
-        </tr>
+    </td>
+    </tr>
     </table>
+    </form>
 </section>

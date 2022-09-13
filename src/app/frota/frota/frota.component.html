@@ -23,7 +23,7 @@
             </td>
         </tr>
     </table>
-    <table *ngIf="list.length > 0" class="tabela">
+    <table *ngIf="list?.length > 0" class="tabela">
         <tr class="cabecalho">
             <th>
                 Plate
@@ -53,14 +53,14 @@
             </td>
             <td width="100" >
                 <div class="status">
-                <div [ngClass]="element.status === 'Active' ? 'bolinha-verde' : 'bolinha-vermelha'"></div> &nbsp;  
-                {{element.status}}
+                <div [ngClass]="element.status === 'true' ? 'bolinha-verde' : 'bolinha-vermelha'"></div> &nbsp;  
+                {{element.status == "true" ? 'Active' : 'Inactive'}}
                 </div>
             </td>
             <td class="icone">
                 <img src="../../../assets/images/edit-regular.svg" class="editar" [routerLink]="['/editar', element.plate]">
                 &nbsp;
-                <img src="../../../assets/images/trash-alt-regular.svg" class="excluir" (click)="openModal()">
+                <img src="../../../assets/images/trash-alt-regular.svg" class="excluir" (click)="openModal(element.id)">
             </td>
         </tr>
     </table>

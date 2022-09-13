@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, platformCore } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { DeleteComponent } from '../delete/delete.component';
+import { ApiService } from '../services/api.service';
 
 
 @Component({
@@ -10,81 +11,32 @@ import { DeleteComponent } from '../delete/delete.component';
 })
 export class FrotaComponent implements OnInit {
 
-  list = [
-    {
-      plate: "ASD1231",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1232",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Inactive"
-    },
-    {
-      plate: "ASD1233",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1234",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1235",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1236",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1237",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1238",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1239",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    },
-    {
-      plate: "ASD1210",
-      model: "c180",
-      manufacturer: "Mercedes-Benz",
-      status: "Active"
-    }
-  ];
-  listFilter = this.list;
+  list: any;
+  listFilter;
   filtro: string = "";
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, private api: ApiService) {
   }
 
   ngOnInit(): void {
+
+    this.api.getList().subscribe(result => {
+      this.list = result;
+      this.listFilter = this.list;
+    })
+
   }
 
-  openModal() {
-    this.dialog.open(DeleteComponent, {
-      width: '350px'
+  openModal(plate) {
+    let dialogRef = this.dialog.open(DeleteComponent, {
+      width: '350px',
+      data: {
+        plate: plate
+      }
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      this.ngOnInit();
     });
   }
 
@@ -94,6 +46,10 @@ export class FrotaComponent implements OnInit {
     } else {
       this.list = this.listFilter;
     }
+
+
   }
+
+
 
 }

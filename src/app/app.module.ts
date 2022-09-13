@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FrotaModule } from './frota/frota.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,9 +18,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     AppRoutingModule,
     FrotaModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{provide:MatDialogRef , useValue:{} }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

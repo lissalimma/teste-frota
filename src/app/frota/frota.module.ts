@@ -4,8 +4,8 @@ import { FrotaComponent } from './frota/frota.component';
 import { FrotaRoutingModule } from './frota-routing.module';
 import { CreatComponent } from './create/creat.component';
 import { DeleteComponent } from './delete/delete.component';
-import { MatDialog } from '@angular/material/dialog';
-import { FormsModule } from '@angular/forms';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditarComponent } from './editar/editar.component';
 
 
@@ -21,7 +21,8 @@ import { EditarComponent } from './editar/editar.component';
   imports: [
     CommonModule,
     FrotaRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class FrotaModule { }
