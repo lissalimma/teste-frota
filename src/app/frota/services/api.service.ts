@@ -9,14 +9,22 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getList() {
-    return this.http.get('http://localhost:8081/Vehicles')
+    return this.http.get('http://localhost:8081/vehicles')
   }
 
   deleteItens(plate) {
-    return this.http.delete('http://localhost:8081/Vehicles/' + plate)
+    return this.http.delete('http://localhost:8081/vehicles/' + plate)
   }
 
   save(form){
-    return this.http.post('http://localhost:8081/Vehicles', form )
+    return this.http.post('http://localhost:8081/vehicles', form )
+  }
+
+  getPlate(id){
+    return this.http.get('http://localhost:8081/vehicles/' + id);
+  }
+
+  edit(params){
+    return this.http.put('http://localhost:8081/vehicles/' + params.id, params);
   }
 }
