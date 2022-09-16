@@ -8,8 +8,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getList() {
-    return this.http.get('http://localhost:8081/vehicles')
+  getList(num) {
+    return this.http.get('http://localhost:8081/vehicles?page=' + num + '&limit=10')
   }
 
   deleteItens(plate) {

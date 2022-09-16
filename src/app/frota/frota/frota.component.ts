@@ -14,17 +14,27 @@ export class FrotaComponent implements OnInit {
   list: any;
   listFilter;
   filtro: string = "";
+  pagNumber: number = 1;
+  pages: any = [];
 
   constructor(public dialog: MatDialog, private api: ApiService) {
   }
 
   ngOnInit(): void {
 
-    this.api.getList().subscribe(result => {
+    this.api.getList(this.pagNumber).subscribe(result => {
       this.list = result;
       this.listFilter = this.list;
+      this.setPagin();
     })
+  }
 
+  setPagin() {
+    let n = this.list.length / 10 ;
+    if (this.list.length % 10 ){
+      n= n+1;
+    }
+    this.pages = Array(parseInt(n.toString()));    
   }
 
   openModal(plate) {
@@ -46,8 +56,6 @@ export class FrotaComponent implements OnInit {
     } else {
       this.list = this.listFilter;
     }
-
-
   }
 
 

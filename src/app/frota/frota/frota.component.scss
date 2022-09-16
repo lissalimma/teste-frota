@@ -116,6 +116,17 @@ table {
 
 }
 
+.lista{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.item{
+    list-style-type: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 420px) {
     .tabela{
         display: block;

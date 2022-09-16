@@ -64,4 +64,11 @@
             </td>
         </tr>
     </table>
+    <ul class="lista">
+        <li *ngFor="let n of pages; index as i" class="item" (click)="pagNumber = i+1; ngOnInit()" >
+            {{
+                i + 1
+            }}
+        </li>
+    </ul>
 </section>
